@@ -1,10 +1,13 @@
 <?php
 class cachorro{
     public $raca;
+    public $porte;
 
-    public function __construct($raca){
+    public function __construct($raca,$porte){
       $this->raca = $raca;
-      echo("Cachorro " .$this->raca. " nasceu \n ");
+      $this->porte = $porte;
+      echo("Cachorro ".$this->raca." nasceu \n");
+      echo("Porte ".$this->porte);
     }
 
     public function __destruct() {
@@ -14,7 +17,9 @@ class cachorro{
     public function latir(){
       echo(" AUAU \n ");
     }
+    
+    public function comer(){
+      echo(" comeu ração \n ");
+    }
 }
-$bob = new cachorro("puddle");
-$bob ->latir();
 ?>
